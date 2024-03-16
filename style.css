@@ -1,0 +1,124 @@
+body {
+    font-family: 'Inter', sans-serif; /* Set the default font to Inter */
+    line-height: 1.6;
+    background: #F6F2F0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+}
+.container > p {
+    margin-bottom: 3%; /* 设置与下方元素的间距 */
+    font-size: 16px; /* 确认字体大小 */
+    color: rgba(0, 0, 0, 0.2); /* 黑色字体，20%透明度 */
+}
+
+.container > p .highlight {
+    color: rgba(0, 0, 0, 1); /* 仅对“ENTER🎯”文本设置为100%透明度 */
+}
+
+
+@keyframes inputFadeEffect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.word-input {
+    font-size: 36px; /* Set font size */
+    font-family: 'Black Han Sans', sans-serif; /* Set the font-family for input */
+    color: #2E3A59; /* Set the font color for input */
+    border: none; /* No border */
+    background: transparent;
+    text-align: left; /* Align text to the left */
+    display: inline-block; /* Allows the width to shrink/grow with content */
+    min-width: 200px; /* Minimum width of the input */
+    max-width: 100%; /* Ensures the input doesn't exceed its parent's width */
+    outline: none; /* Removes the blue outline */
+    animation: inputFadeEffect 0.2s ease-out;
+}
+.sound-section {
+    display: flex;
+    align-items: center;
+    margin-top: 2%; /* 设置与上方元素的间距 */
+    margin-bottom: 3%;
+}
+
+.sound-container {
+    display: flex;
+    align-items: center;
+}
+
+.playSoundIcon{
+    margin-top: 11%;
+    margin-left: 10%; /* 或根据需要调整以便在图标和文本之间提供适当的间距 */
+}
+.playSoundIcon:hover {
+    cursor: pointer;
+}
+
+
+p {
+    margin: 0; /* 移除默认的外边距 */
+}
+
+
+
+/* Keep using Inter for other elements */
+/* 增加 <h4> 的顶部外边距，使其与上方的 <h3> 有更大的间距 */
+h4 {
+    font-size: 14px; /* 设置字体大小 */
+    color: #5B647C; /* 设置字体颜色 */
+    margin-top: 4%; /* 增加与上方元素的间距 */
+    margin-bottom: 2%; /* 保持与下方元素的默认间距 */
+}
+
+
+/* 调整 <h3> 标签的样式，包括加粗 */
+h3 {
+    font-size: 20px; /* 设置字体大小为20px */
+    color: #2e3d59; /* 设置字体颜色 */
+    font-weight: bold; /* 使字体加粗 */
+    /* 如果已有其他margin设置，保持不变或根据需要调整 */
+    margin-top: 2%; /* 根据需要保持或调整顶部外边距 */
+    margin-bottom: 2%; /* 根据需要保持或调整底部外边距 */
+}
+
+p {
+    margin: 0; /* 先重置默认的外边距 */
+    font-size: 16px; /* 设置字体大小 */
+    color: rgba(0, 0, 0, 0.2); /* 设置字体颜色和透明度 */
+}
+
+#translationResult {
+    min-height: 4em; /* 根据你的文本大小和行高调整 */
+    overflow: hidden; /* 防止内容溢出 */
+    opacity: 0; /* 初始状态透明 */
+    transition: opacity 500ms ease-in-out; /* 过渡动画效果 */
+}
+
+#sentenceResult {
+    min-height: 2em; /* 根据你的文本大小和行高调整 */
+    overflow: hidden; /* 防止内容溢出 */
+    opacity: 0; /* 初始状态透明 */
+    transition: opacity 500ms ease-in-out; /* 过渡动画效果 */
+}
+  
+#audioResult,
+#speakButton,
+#generatedefinton
+{
+  visibility: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Other head elements -->
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Definition Of Words</title>
+</head>
+<body>
+
+    <div class="container">
+        <p>Type the word into the input below and <span class="highlight">ENTER 🎯</span></p>
+
+        <input type="text" id="wordInput" class="word-input" value="Tomorrow" pattern="[A-Za-z]*">
+        <div id="underline" style="position: absolute; height: 2px; background: #333; width: 0;"></div> 
+        <div class="sound-section">
+            <p class="sound-container">Sound: 
+                <span id="playSoundIcon" class="playSoundIcon">
+                    <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.9 15.3592V2.74365C9.9 1.6971 8.65385 1.15207 7.88539 1.86251L4.3049 5.17266C4.08316 5.37767 3.79227 5.49153 3.49029 5.49153H1.2C0.537258 5.49153 0 6.02878 0 6.69152V11.6136C0 12.2763 0.537258 12.8136 1.2 12.8136H3.50984C3.80007 12.8136 4.08047 12.9187 4.29909 13.1096L7.91075 16.2631C8.68691 16.9408 9.9 16.3896 9.9 15.3592Z" fill="#2E3A59"/>
+                        <rect x="11.7" y="4.5" width="1.5" height="9" rx="0.75" fill="#2E3A59"/>
+                        <rect x="14.4" y="6.30005" width="1.5" height="5.4" rx="0.75" fill="#2E3A59"/>
+                    </svg>
+                </span>
+                <audio id="audioResult" controls></audio>
+                <button id="speakButton">生成音频</button>
+            </p>
+        </div>
+
+        <!--Definition-->
+        <h4>Definition:</h4>
+        <h3 id="translationResult"></h3>
+        <button id="generatedefinton">Generate</button>
+
+        <!--Examples-->
+        <h4>How to use in Sentence:</h4>
+        <h3 id="sentenceResult"></h3>
+        <button id="generatesenten">Generate Sentence</button>
+       
+    </div>
+   <script src="js.js"></script>
+
+    
+</body>
+</html>
