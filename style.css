@@ -122,3 +122,37 @@ p {
   width: 0;
   height: 0;
 }
+
+/* 对于宽度小于600px的设备 */
+@media (max-width: 600px) {
+    body {
+        display: block; /* 在小屏幕上，可能需要改变布局 */
+        padding: 20px; /* 增加一些内边距 */
+    }
+    
+    .container {
+        width: 100%; /* 让容器宽度为100% */
+        max-width: none; /* 移除最大宽度限制 */
+    }
+    
+    .word-input, h3, h4, .sound-section p {
+        font-size: 14px; /* 减小字体大小 */
+    }
+
+    .word-input {
+        min-width: 100%; /* 输入框宽度调整为100% */
+    }
+
+    .sound-section, .sound-container {
+        flex-direction: column; /* 在小屏幕上堆叠元素 */
+        align-items: start; /* 调整对齐方式 */
+    }
+
+    .playSoundIcon {
+        margin: 10px 0; /* 调整图标的边距 */
+    }
+    
+    #translationResult, #sentenceResult {
+        min-height: auto; /* 调整最小高度 */
+    }
+}
