@@ -126,7 +126,7 @@ p {
 /* 对于宽度小于600px的设备 */
 @media (max-width: 600px) {
     html {
-        font-size: 16px; /* 设置基础字体大小 */
+        font-size: 22px; /* 设置基础字体大小 */
     }
 
     body {
@@ -145,6 +145,13 @@ p {
 
     .word-input {
         min-width: 100%;
+    }
+    .word-input {
+        margin-bottom: 2rem; /* 在输入框下方留出空间 */
+    }
+
+    .sound-section {
+        margin-top: 2rem; /* 在声音部分上方留出空间 */
     }
 
     .sound-section, .sound-container {
