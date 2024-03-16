@@ -8,7 +8,7 @@ function displayContent(content) {
     translationResult.style.opacity = 1;
   }
 
-  document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     var input = document.getElementById('wordInput');
     var underline = document.getElementById('underline');
     var generateDefinitionButton = document.getElementById('generatedefinton'); // 获取定义生成按钮
@@ -20,14 +20,12 @@ function displayContent(content) {
     }
 
     function getTextWidth(text, font) {
-        // 使用canvas来动态计算文本宽度
         var canvas = getTextWidth.canvas || (getTextWidth.canvas = document.createElement("canvas"));
         var context = canvas.getContext("2d");
         context.font = font;
         return context.measureText(text).width;
     }
 
-    // 监听输入框的输入事件来更新下划线宽度
     input.addEventListener('input', updateUnderline);
     updateUnderline(); // 初始时也更新一次下划线宽度
 
@@ -35,12 +33,19 @@ function displayContent(content) {
     input.addEventListener('keydown', function(event) {
         if (event.key === "Enter") { // 检查是否为回车键
             event.preventDefault(); // 防止默认行为，如表单提交
-            // 触发定义生成按钮的点击事件
-            generateDefinitionButton.click();
+
+            // 先触发定义生成按钮的点击事件
+            if (generateDefinitionButton) {
+                generateDefinitionButton.click();
+            }
+
+            // 然后触发句子生成按钮的点击事件
+            if (generateSentenceButton) {
+                generateSentenceButton.click();
+            }
         }
     });
 });
-
 
 document.getElementById('playSoundIcon').addEventListener('click', function() {
     var textToSpeak = document.getElementById('wordInput').value;
