@@ -125,34 +125,39 @@ p {
 
 /* 对于宽度小于600px的设备 */
 @media (max-width: 600px) {
+    html {
+        font-size: 16px; /* 设置基础字体大小 */
+    }
+
     body {
-        display: block; /* 在小屏幕上，可能需要改变布局 */
-        padding: 20px; /* 增加一些内边距 */
+        display: block;
+        padding: 20px;
     }
     
     .container {
-        width: 100%; /* 让容器宽度为100% */
-        max-width: none; /* 移除最大宽度限制 */
+        width: 100%;
+        max-width: none;
     }
     
     .word-input, h3, h4, .sound-section p {
-        font-size: 14px; /* 减小字体大小 */
+        font-size: 1rem; /* 使用 rem 单位，相对于根元素的字体大小 */
     }
 
     .word-input {
-        min-width: 100%; /* 输入框宽度调整为100% */
+        min-width: 100%;
     }
 
     .sound-section, .sound-container {
-        flex-direction: column; /* 在小屏幕上堆叠元素 */
-        align-items: start; /* 调整对齐方式 */
+        flex-direction: column;
+        align-items: start;
     }
 
     .playSoundIcon {
-        margin: 10px 0; /* 调整图标的边距 */
+        margin: 1rem 0;
     }
     
     #translationResult, #sentenceResult {
-        min-height: auto; /* 调整最小高度 */
+        min-height: auto;
     }
 }
+
