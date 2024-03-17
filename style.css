@@ -16,8 +16,8 @@ body {
 }
 .container > p {
     margin-bottom: 3%; /* 设置与下方元素的间距 */
-    font-size: 16px; /* 确认字体大小 */
-    color: rgba(0, 0, 0, 0.2); /* 黑色字体，20%透明度 */
+    font-size: 20px; /* 确认字体大小 */
+    color: rgba(0, 0, 0, 0.4); /* 黑色字体，20%透明度 */
 }
 
 .container > p .highlight {
@@ -34,7 +34,7 @@ body {
     }
 }
 .word-input {
-    font-size: 36px; /* Set font size */
+    font-size: 56px; /* Set font size */
     font-family: 'Black Han Sans', sans-serif; /* Set the font-family for input */
     color: #2E3A59; /* Set the font color for input */
     border: none; /* No border */
@@ -76,7 +76,7 @@ p {
 /* Keep using Inter for other elements */
 /* 增加 <h4> 的顶部外边距，使其与上方的 <h3> 有更大的间距 */
 h4 {
-    font-size: 14px; /* 设置字体大小 */
+    font-size: 20px; /* 设置字体大小 */
     color: #5B647C; /* 设置字体颜色 */
     margin-top: 4%; /* 增加与上方元素的间距 */
     margin-bottom: 2%; /* 保持与下方元素的默认间距 */
@@ -85,7 +85,7 @@ h4 {
 
 /* 调整 <h3> 标签的样式，包括加粗 */
 h3 {
-    font-size: 20px; /* 设置字体大小为20px */
+    font-size: 30px; /* 设置字体大小为20px */
     color: #2e3d59; /* 设置字体颜色 */
     font-weight: bold; /* 使字体加粗 */
     /* 如果已有其他margin设置，保持不变或根据需要调整 */
@@ -95,7 +95,7 @@ h3 {
 
 p {
     margin: 0; /* 先重置默认的外边距 */
-    font-size: 16px; /* 设置字体大小 */
+    font-size: 22px; /* 设置字体大小 */
     color: rgba(0, 0, 0, 0.2); /* 设置字体颜色和透明度 */
 }
 
@@ -126,7 +126,7 @@ p {
 /* 对于宽度小于600px的设备 */
 @media (max-width: 600px) {
     html {
-        font-size: 22px; /* 设置基础字体大小 */
+        font-size: 30px; /* 设置基础字体大小 */
     }
 
     body {
@@ -140,7 +140,7 @@ p {
     }
     
     .word-input, h3, h4, .sound-section p {
-        font-size: 1rem; /* 使用 rem 单位，相对于根元素的字体大小 */
+        font-size: 2rem; /* 使用 rem 单位，相对于根元素的字体大小 */
     }
 
     .word-input {
