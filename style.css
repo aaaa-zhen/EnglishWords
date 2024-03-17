@@ -59,7 +59,7 @@ body {
 }
 
 .playSoundIcon{
-    margin-top: 11%;
+    margin-top: 5%;
     margin-left: 10%; /* 或根据需要调整以便在图标和文本之间提供适当的间距 */
 }
 .playSoundIcon:hover {
