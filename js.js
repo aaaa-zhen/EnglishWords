@@ -53,11 +53,11 @@ document.getElementById('playSoundIcon').addEventListener('click', function() {
     // 如果文本框为空，则不执行任何操作
     if (!textToSpeak.trim()) return;
 
-    fetch('https://api.openai.com/v1/audio/speech', {
+    fetch('https://api.aihubmix.com/v1/audio/speech', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer sess-H0sw5dSyfZ3AzFn5VedMOLvQugXmdIsvAKbtEq5l' // 这里替换成你的API密钥
+            'Authorization':'Bearer sk-3h4UkodL951Aif2EC9A485C91eBe4bE4B04d599fA355D5F8' // 这里替换成你的API密钥
         },
         body: JSON.stringify({
             model: "tts-1-hd",
